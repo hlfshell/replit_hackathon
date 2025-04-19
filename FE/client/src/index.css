@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom color styles */
+:root {
+  --purple: 267, 80%, 50%;
+  --purple-light: 267, 80%, 95%;
+  --purple-dark: 267, 50%, 47%;
+}
