@@ -1,0 +1,43 @@
+### Prompt for Front-End Developer:
+
+Create a modern, responsive feedback display to present the personality-based feedback received for uploaded advertisements. Maintain consistency with the upload form design theme.
+
+#### Design Specifications:
+
+- **Layout:**
+
+  - Use a grid or flexbox layout to neatly organize individual feedback cards.
+  - Each card should have rounded corners, subtle drop-shadow, and a clean white background consistent with the upload form design.
+  - Background of the feedback display page should have a subtle purple gradient similar to the upload form.
+
+- **Feedback Card Content:**
+
+  Each feedback card represents a single personality response and must clearly display the following information:
+
+  - **Personality Name:** Clearly highlighted at the top of each card.
+  - **Thought:** Brief paragraph capturing the personality's thoughts on the advertisement.
+  - **Emotional Response:** Short descriptive summary of the emotional reaction.
+  - **Emotions:** Display as labeled tags or badges, clearly highlighting each emotion from the list provided below.
+  - **Categories:** Display categories as clearly defined tags for quick identification.
+
+- **Emotion Tags:**
+
+Use clearly distinguishable tags or badges to represent emotions, selecting from the following comprehensive list:
+
+```
+["Happy", "Joyful", "Excited", "Interested", "Proud", "Accepted", "Powerful", "Peaceful", "Intimate", "Loving", "Hopeful", "Playful", "Inspired", "Open", "Confident", "Important", "Fulfilled", "Respected", "Courageous", "Provocative", "Sensitive", "Energetic", "Liberated", "Ecstatic", "Eager", "Awe", "Astonished", "Perplexed", "Dismayed", "Shocked", "Terrified", "Frightened", "Worried", "Overwhelmed", "Inadequate", "Inferior", "Worthless", "Insignificant", "Alienated", "Disrespected", "Ridiculed", "Embarrassed", "Devastated", "Resentful", "Jealous", "Violated", "Fear", "Scared", "Anxious", "Insecure", "Submissive", "Hurt", "Humiliated", "Threatened", "Anger", "Mad", "Hateful", "Aggressive", "Frustrated", "Hostile", "Enraged", "Furious", "Violent", "Irritated", "Infuriated", "Provoked", "Withdrawn", "Suspicious", "Skeptical", "Sarcastic", "Judgmental", "Disgust", "Critical", "Distant", "Disappointed", "Awful", "Loathing", "Repugnant", "Revolted", "Revulsion", "Detestable", "Aversion", "Sad", "Lonely", "Bored", "Depressed", "Despair", "Abandoned", "Ignored", "Victimized", "Powerless", "Vulnerable", "Empty", "Isolated", "Apathetic", "Indifferent", "Guilty", "Remorseful", "Ashamed", "Hesitant", "Avoidance", "Surprise", "Startled", "Confused", "Amazed"]
+```
+
+- **Interactivity:**
+
+  - Allow users to click or hover on emotion tags for brief definitions or descriptions to provide additional clarity.
+
+- **Additional Design Considerations:**
+
+  - Include adequate spacing between cards for visual clarity.
+  - Implement smooth transitions or animations to enhance the user experience as feedback cards load.
+
+---
+
+Ensure that all design choices align closely with the upload form for a seamless user experience.
+

@@ -1,0 +1,63 @@
+### Prompt for Front-End Developer:
+
+Create a modern, responsive upload form that enables users to receive personality-based feedback on advertisements.
+
+#### Design Specifications:
+
+- **Layout:**
+
+  - Centered card layout with rounded corners and a subtle drop-shadow.
+  - White card positioned over a gentle purple gradient background to maintain a clean and contemporary aesthetic.
+
+- **Content Elements:**
+
+  - Headline: **"Please upload your AD here"**
+  - Subheading: Clearly state the value proposition. Example: "Upload your ad to receive tailored feedback from selected consumer personalities."
+
+- **Form Inputs:**
+
+  - **Text box:** Allow users to add descriptive context or information about their advertisement. Clearly label this input (e.g., "Ad Description").
+  - **Image Uploader:** Include drag-and-drop functionality and manual file selection. Specify supported file types (e.g., JPG, PNG, GIF).
+  - **Multi-select Dropdown:** Enable selection of up to 10 personalities. Each dropdown item should clearly show the personality's name and summary underneath for quick reference.
+    - Include search and filtering functionality based on attributes such as age, occupation, location, etc.
+    - Populate this dropdown dynamically by calling the API endpoint: `localhost/personalities`.
+    - Assume the API returns data in the following JSON structure:
+
+```json
+{
+  "id": string,
+  "name": string,
+  "age": integer,
+  "gender": string,
+  "location": string,
+  "education_level": string,
+  "marital_status": string,
+  "occupation": string,
+  "job_title": string,
+  "industry": string,
+  "income": string,
+  "seniority_level": string,
+  "personality_traits": [string],
+  "values": [string],
+  "attitudes": [string],
+  "interests": [string],
+  "lifestyle": [string],
+  "habits": [string],
+  "frustrations": [string],
+  "summary": string
+}
+```
+
+- Clearly indicate how to handle and display a large number of personalities (pagination or scrolling).
+
+- **Action Button:**
+
+  - Include a clearly visible and inviting "Get Feedback" button to submit the form.
+
+- **Footer and Additional Links:**
+
+  - Provide unobtrusive links for Terms of Service, Privacy Policy, and Help/Support documentation below the form.
+  - Include trust indicators, such as: "We respect your privacy."
+
+---
+
