@@ -40,12 +40,19 @@ app.add_middleware(
 # Mount the uploads directory to serve images
 app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
+# Get database configuration from environment variables or use defaults
+db_host = os.environ.get("POSTGRES_HOST", "localhost")
+db_port = int(os.environ.get("POSTGRES_PORT", "5432"))
+db_name = os.environ.get("POSTGRES_DB", "app")
+db_user = os.environ.get("POSTGRES_USER", "postgres")
+db_password = os.environ.get("POSTGRES_PASSWORD", "postgres")
+
 db_pool = Pool(
-    host="localhost",
-    port=5432,
-    dbname="app",
-    user="postgres",
-    password="postgres",
+    host=db_host,
+    port=db_port,
+    dbname=db_name,
+    user=db_user,
+    password=db_password,
 )
 Migration(db_pool).run_migrations()
 store = Store(db_pool)
