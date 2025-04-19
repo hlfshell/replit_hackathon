@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ad-rating-app"
+version = "0.1.0"
+description = "Ad rating application with personality-based analysis"
+requires-python = ">=3.8"
+dependencies = [
+    # Web framework and server
+    "fastapi==0.115.8",
+    "uvicorn==0.34.0",
+    "starlette==0.45.3",
+    "python-multipart>=0.0.6",
+    
+    # Database
+    "sqlalchemy>=2.0.0",
+    "psycopg2==2.9.10",
+    
+    # Data validation and parsing
+    "pydantic==2.10.6",
+    "pydantic-core==2.27.2",
+    "anyio==4.9.0",
+    "typing-extensions==4.12.2",
+    
+    # AI and ML
+    "arkaine==0.0.22",
+    "google-generativeai==0.8.4",
+    "google-ai-generativelanguage==0.6.15",
+    "anthropic==0.49.0",
+    "openai==1.68.0",
+    "numpy==2.2.2",
+    "scikit-learn==1.6.1",
+    "scipy==1.15.2",
+    
+    # HTTP and networking
+    "httpx==0.28.1",
+    "requests==2.32.3",
+    "httpcore==1.0.8",
+    "websockets==14.1",
+    
+    # Testing
+    "pytest==8.3.5",
+    
+    # Utilities
+    "tqdm==4.67.1",
+    "PyMuPDF==1.25.5",
+    "pymupdf4llm==0.0.17",
+    "beautifulsoup4==4.13.1",
+    "markdownify==0.13.1",
+    "wikipedia==1.4.0",
+    "docker==7.1.0",
+    "jiter==0.9.0",
+    "pytz==2024.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.1.0",
+    "isort>=5.12.0",
+    "mypy>=1.1.1",
+    "flake8>=6.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
